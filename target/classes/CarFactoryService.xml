@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+   
+   
+   
+  
+      <bean id = "car01" class = "model.Car" name="carr">
+      <property name = "name" value = "BMW"/>
+      <property name = "model" value = "M001"/>
+      <property name = "price" value = "300"/>
+      </bean>
+      
+      
+      <bean id = "emp01" class = "model.Employee" name="employeee">
+      <property name = "name" value = "soojan"/>
+      <property name = "age" value = "20"/>
+     
+      </bean>
+      
+      
+      <!--  autowire mode=no  -->
+      <!-- <bean id = "cfs01" class = "model.CarFactoryService">
+      <property name = "name" value = "MyFactory"/>
+      <property name = "address" value = "fremont"/>
+       <property name = "car" ref = "car01"/>      
+      <property name = "employee" ref = "emp01"/>
+     
+      </bean> -->
+      
+         <!--  autowire mode=ByType  -->
+         
+         
+      <!--  <bean id = "cfs01" class = "model.CarFactoryService" autowire="byType">
+      <property name = "name" value = "MyFactory"/>
+      <property name = "address" value = "fremont"/>
+       <property name = "car" ref = "car01"/>      
+      <property name = "employee" ref = "emp01"/>
+     
+      </bean>  -->
+      
+      
+      <!--  autowire mode=ByName  -->
+         
+         
+       <bean id = "cfs01" class = "model.CarFactoryService" autowire="byName">
+      <property name = "name" value = "MyFactory"/>
+      <property name = "address" value = "fremont"/>
+     
+     
+      </bean> 
+      
+      
+      </beans>
+      
+      
